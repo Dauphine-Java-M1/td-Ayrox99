@@ -1,0 +1,21 @@
+Aymeric Roinel
+
+Exercice 1:
+4. Il faut utiliser la commande "mvn -n" pour connaître la version de Maven. La version installée est la 3.6.0 (donc c'est bon).
+5. Le paramètre groupeId sert à préciser le groupe ou l'organisation qui développe le projet. C'est une des clés utilisée pour identifier de manière unique le projet et ainsi éviter les conflits de noms.
+Le paramètre artifactId sert quant à lui à préciser la base du nom de l'artéfact du projet.
+6. Ce répertoire contient les fichiersd compilés.
+8. Le class path permet de spécifier où trouver le fichier .class, utilisé pour l'exécution.
+13. Cette propriété doit permettre de spécifier la version du compilateur Java utilisée pour compiler les targets. Dans un soucis de cohérence, nous devrions lui mettre la même valeur que pour la version du compilateur Java utilisée pour compiler les sources.
+
+Exercice 2:
+1. Je reçois le message "aucun attribut manifest principal dans target/td00-1.0-SNAPSHOT.jar".
+
+Exercice 3:
+3. Cela change automatiquement en "System.out.println();".
+4. Cela propose entre autres de créer une méthode "ToStr()".
+5. Cela propose de créer un main.
+6. Cela propose différentes choses, dont créer une méthode "get()" ou créer un getter pour notre variable toto. Pareil pour pour set, sauf que cela créer un setter.
+7. Cela permet de renommer l'objet sélectionné, et que le renommage soit appliqué partout où l'objet est utilisé.
+8. L'archive n'est pas présente sur nos machines.
+
