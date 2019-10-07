@@ -18,4 +18,4 @@ Exercice 3:
 6. Cela propose différentes choses, dont créer une méthode "get()" ou créer un getter pour notre variable toto. Pareil pour pour set, sauf que cela créer un setter.
 7. Cela permet de renommer l'objet sélectionné, et que le renommage soit appliqué partout où l'objet est utilisé.
 8. L'archive n'est pas présente sur nos machines.
-
+prout
