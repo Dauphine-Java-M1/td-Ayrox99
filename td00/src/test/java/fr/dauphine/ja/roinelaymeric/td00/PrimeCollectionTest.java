@@ -30,4 +30,16 @@ public class PrimeCollectionTest extends TestCase {
     public void testPrimeCollection(){
         assertTrue( true );
     }
+    
+    public void test0IsNotPrime(){
+        assertTrue( !PrimeCollection.isPrime(0) );
+    }
+    
+    public void testTwoIsPrime(){
+        assertTrue( PrimeCollection.isPrime(2) );
+    }
+    
+    public void test9IsNotPrime(){
+        assertTrue( !PrimeCollection.isPrime(9) );
+    }
 }
