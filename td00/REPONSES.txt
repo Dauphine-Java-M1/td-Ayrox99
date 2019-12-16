@@ -1,5 +1,5 @@
 Aymeric Roinel
-
+prout
 Exercice 1:
 4. Il faut utiliser la commande "mvn -n" pour connaître la version de Maven. La version installée est la 3.6.0 (donc c'est bon).
 5. Le paramètre groupeId sert à préciser le groupe ou l'organisation qui développe le projet. C'est une des clés utilisée pour identifier de manière unique le projet et ainsi éviter les conflits de noms.
