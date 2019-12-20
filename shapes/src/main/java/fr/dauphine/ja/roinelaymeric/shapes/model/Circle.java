@@ -1,6 +1,10 @@
-package fr.dauphine.ja.roinelaymeric.shapes;
+package fr.dauphine.ja.roinelaymeric.shapes.model;
 
-public class Circle {
+import java.awt.Graphics;
+
+import fr.dauphine.ja.roinelaymeric.shapes.view.DrawableCircle;
+
+public class Circle extends Shape{
 
 	private Point centre;
 	private double rayon;
@@ -19,6 +23,10 @@ public class Circle {
 		this.centre.translate(dx, dy);
 	}
 	
+	public double getRayon() {
+		return this.rayon;
+	}
+	
 	public Point getCenter() {
 		return new Point(this.centre);
 	}
@@ -32,8 +40,14 @@ public class Circle {
 		return Math.PI * this.rayon * this.rayon;
 	}
 	
-	public boolean equals (Circle c) {
+	public boolean equals (Shape s) {
+		Circle c = (Circle) s;
 		return this.centre.isSameAs(c.centre) && this.rayon == c.rayon;
+	}
+	
+	@Override
+	public void translate(int dx, int dy) {
+		this.centre.translate(dx, dy);
 	}
 	
 	public boolean contains(Point p) {
@@ -47,6 +61,11 @@ public class Circle {
 			}
 		}
 		return false;
+	}
+	
+	public void draw(Graphics g) {
+		DrawableCircle dc = new DrawableCircle(this);
+		dc.paintComponent(g);
 	}
 	
 	public static void main(String[] args) {

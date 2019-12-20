@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: roinay19
+Build-Jdk: 11.0.3
+Main-Class: fr.dauphine.ja.roinelaymeric.td00.PrimeCollection
+Created-By: Maven Integration for Eclipse
+

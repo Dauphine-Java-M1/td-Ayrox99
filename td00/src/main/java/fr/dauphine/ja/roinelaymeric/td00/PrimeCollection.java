@@ -33,7 +33,7 @@ public class PrimeCollection {
 		}
 	}
 	
-	private static boolean isPrime(int p) {
+	static boolean isPrime(int p) {
 		if (p == 0 || p == 1) {
 			return false;
 		}

@@ -1,0 +1,69 @@
+TD1.
+
+Exercice 1 :
+
+1) Cela fonctionne car nous sommes dans la classe Point, donc nous avons accès à tous ses champs (même privés). Pour ce qui est de l'affichage pur, même si nous n'avons pas défini de constructeur, il y en a un par défaut (apparamment il initialise x et y à 0).
+
+2) Cela ne fonctionne pas, car les champs x et y de la classe Point sont privés. On peut résoudre ce problème en changeant leur visibilité à "package" ou "public".
+
+3) Par sécurité, pour éviter que quelqu'un ne change de manière inopinée des variables qu'il ne devrait pas changer.
+
+4) Un accesseur permet d'accèder depuis une autre classe à la valeur d'une variable privée d'une classe (accesseur = getter). Oui, il faut le faire ici, pour que le code du main de TestPoint fonctionne.
+
+5) A ce moment, le constructeur utilisé dans le main ne fonctionne plus. En effet, dès qu'un constructeur est créé, le constructeur par défaut (celui sans paramètres) est supprimé. Il faut alors soit créer un constructeur sans paramètres, soit changer le constructeur dans le main.
+
+6) Le constructeur pense alors que l'on affecte aux deux variables leur propre valeur ("the assignment to variable {nom de la variable} has no effect"). Pour remdédier à cela, on peut rajouter ".this" devant nos variables, pour que le compilateur fasse bien la différence entre nos variables de classe et les paramètres du constructeur.
+
+7) Il suffit de créer une variable statique (donc partagée par toutes les instances de la classe) initialisée à 0, et d'incrémenter cette variable dans chaque constructeur (elle sera donc incrémentée à chaque appel d'un constructeur, c-a-d à chaque fois que l'on crée une instance de la classe).
+
+8) Le compilateur regarde le(s) paramètre(s) pour déterminer le constructeur à appeler.
+
+Exercice 2 :
+
+1) Le code va afficher "True False". True pour le premier, car les deux objets sont les mêmes ("Point p2=p1"), mais False pour le second, car même si les points ont les mêmes coordonnées, il n'ont pas la même adresse mémoire.
+
+3) Le problème est qu'il ne trouve pas le point p3 dans la liste (il renvoie -1). Cela vient du fait qu'il cherche le point p3, et non un point ayant les coordonnées de p3 (c'est d'ailleurs pour cela qu'il trouve l'index pour p2, qui est le même objet que p1, ajouté précédemment dans la liste).
+On va donc modifier la méthode "equals" de Point, pour qu'elle compare les points en fonction de leurs coordonnées.
+
+Exercice 3 :
+
+2) Il faut vérifier que l'on ne sort pas des limites du tableau ou autrement, on aura une erreur à l'exécution. Pour remédier à cela, on crée une variable qui stocke le remplissage actuel du tableau de points.
+
+5) On obtient l'erreur "java.lang.NullPointerException". Cela ne change rien si l'on ajoute "add(null)" avant.
+
+6) Les 3 méthodes n'ont plus lieu d'être : - pointCapacity est inutile car la taille de notre liste de points est maintenant mutable
+- nbPoints utilise maintenant la méthode ".size" de la classe LinkedList
+- contains utilise maintenant lui aussi la méthode ".contains" de la classe LinkedList
+On remarque par ailleurs qu'avec ces nouvelles méthodes, les lignes de code de la question 5 ne provoquent plus d'erreurs.
+
+Exercice 4 :
+
+1) On peut choisir de juste modifier l'instance de Point qui appelle la méthode, ou on peut renvoyer une nouvelle instance de Point (j'ai choisi de modifier l'instance actuelle).
+
+4) Le problème est que translater le deuxième cercle translate aussi le premier. Cela vient du fait que les deux partagent la même instance comme centre. Pour parer à cela, je vais changer le constructeur du cercle pour que celui crée un nouvelle instance de Point comme centre.
+
+5) Le problème est que le translate s'applique aussi en centre du cercle (et pas seulement au centre récupéré). Pour remédier à cela la méthode "getCenter" devra renvoyer une nouvelle instance du centre.
+
+9) Il faut faire une méthode statique, car cette méthode ne sera pas liée à une instance particulière d'un cercle, mais à plusieurs.
+
+Exercice 5 :
+
+1) Oui, car l'anneau n'est qu'un cerle avec un sous-rayon en plus.
+
+4) Sans code supplémentaire, le programme affiche l'anneau tel un cercle, c-a-d les coordonnées du centre, le rayon et la surface.
+
+
+TD2.
+
+Exercice 1 :
+
+
+
+
+
+
+
+
+
+
+

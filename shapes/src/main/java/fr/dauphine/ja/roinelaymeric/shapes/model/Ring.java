@@ -1,4 +1,8 @@
-package fr.dauphine.ja.roinelaymeric.shapes;
+package fr.dauphine.ja.roinelaymeric.shapes.model;
+
+import java.awt.Graphics;
+
+import fr.dauphine.ja.roinelaymeric.shapes.view.DrawableRing;
 
 public class Ring extends Circle {
 	
@@ -10,6 +14,10 @@ public class Ring extends Circle {
 	         throw new IllegalArgumentException("Le rayon doit être strictement supérieur au sous-rayon");
 	    }		
 		this.sous_Rayon = sr;
+	}
+	
+	public double getSousRayon() {
+		return this.sous_Rayon;
 	}
 	
 	public boolean equals (Ring r) {
@@ -31,6 +39,12 @@ public class Ring extends Circle {
 			}
 		}
 		return false;
+	}
+	
+	@Override
+	public void draw(Graphics g) {
+		DrawableRing dc = new DrawableRing(this);
+		dc.paintComponent(g);
 	}
 	
 	public static void main(String[] args) {

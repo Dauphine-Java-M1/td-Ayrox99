@@ -1,8 +1,11 @@
-package fr.dauphine.ja.roinelaymeric.shapes;
+package fr.dauphine.ja.roinelaymeric.shapes.model;
 
+import java.awt.Graphics;
 import java.util.LinkedList;
 
-public class LigneBrisee {
+import fr.dauphine.ja.roinelaymeric.shapes.view.DrawableLine;
+
+public class LigneBrisee extends Shape{
 	
 	//private Point[] points;
 	//private int ptAct = 0;
@@ -14,6 +17,10 @@ public class LigneBrisee {
 	
 	public LigneBrisee() {
 		this.points = new LinkedList<Point>();
+	}
+	
+	public LinkedList<Point> getPoints(){
+		return this.points;
 	}
 	
 	/*public boolean add (Point p) {
@@ -50,6 +57,13 @@ public class LigneBrisee {
 		return this.points.size();
 	}
 	
+	@Override
+	public void translate(int dx, int dy) {
+		for (Point p : this.points) {
+			p.translate(dx, dy);
+		}
+	}
+	
 	public boolean contains(Point p) {
 		return this.points.contains(p);
 	}
@@ -63,5 +77,17 @@ public class LigneBrisee {
 		System.out.println(l.add(p2));
 		//System.out.println(l.add(null));
 		System.out.println(l.contains(null));
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		DrawableLine dc = new DrawableLine(this);
+		dc.paintComponent(g);		
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

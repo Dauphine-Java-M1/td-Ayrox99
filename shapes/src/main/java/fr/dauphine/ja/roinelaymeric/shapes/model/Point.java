@@ -1,4 +1,4 @@
-package fr.dauphine.ja.roinelaymeric.shapes;
+package fr.dauphine.ja.roinelaymeric.shapes.model;
 
 import java.util.ArrayList;
 
@@ -14,7 +14,11 @@ public class Point {
 	public double getY() {
 		return y;
 	}
-
+	
+	public int getNbPoints() {
+		return nbPts;
+	}
+	
 	@Override
 	public String toString() {
 		return "(" + this.x + ", " + this.y + ")";
@@ -33,19 +37,19 @@ public class Point {
 	public Point() {
 		this.x = 0;
 		this.y = 0;
-		this.nbPts++;
+		nbPts++;
 	}
 	
 	public Point(double x, double y) {
 		this.x = x;
 		this.y = y;
-		this.nbPts++;
+		nbPts++;
 	}
 	
 	public Point(Point p) {
 		this.x = p.x;
 		this.y = p.y;
-		this.nbPts++;
+		nbPts++;
 	}
 	
 	public boolean isSameAs(Point p) {
